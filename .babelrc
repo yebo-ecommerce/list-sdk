@@ -1,12 +1,13 @@
 {
   "presets": ["es2015"],
+  "plugins": [
+    [ "module-alias", [ { "src": "./src/", "expose": "src" } ] ],
+    "transform-runtime"
+  ],
   "env": {
     "test": {
       "plugins": ["istanbul"]
     }
-  },
-  "plugins": [
-    [ "module-alias", [ { "src": "./src/", "expose": "src" } ] ]
-  ]
+  }
 }
 

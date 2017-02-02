@@ -23,6 +23,10 @@
     "old-test": "mocha --recursive --compilers js:babel-register",
     "build": "node build/build.js"
   },
+  "nyc": {
+    "sourceMap": false,
+    "instrument": false
+  },
   "dependencies": {
     "axios": "^0.15.3",
     "babel-runtime": "^6.22.0",

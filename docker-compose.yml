@@ -1,6 +1,6 @@
 version: '2'
 services:
-  test:
+  web:
     build: .
     command: yarn run test-watch
     volumes:
