@@ -1,0 +1,17 @@
+version: '2'
+services:
+  test:
+    build: .
+    command: yarn run test-watch
+    volumes:
+      - ./:/usr/local/src
+      - listsdk_node_modules:/usr/local/src/node_modules
+    ports:
+      - 8000:80
+      - 5858:5858
+    restart: always
+    environment:
+      - NODE_ENV=test
+volumes:
+  listsdk_node_modules:
+    external: true

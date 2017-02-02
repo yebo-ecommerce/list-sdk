@@ -1,0 +1,24 @@
+version: '2'
+services:
+  coverage:
+    build: .
+    command: yarn run cover-watch
+    volumes:
+      - ./:/usr/local/src
+      - listsdk_node_modules:/usr/local/src/node_modules
+    restart: always
+    environment:
+      - NODE_ENV=test
+  web:
+    image: python:alpine
+    ports:
+      - 666:80
+    working_dir: /app
+    command: python3 -m http.server 80
+    volumes:
+      - ./api/coverage/lcov-report/:/app
+    logging:
+      driver: "none"
+volumes:
+  listsdk_node_modules:
+    external: true
