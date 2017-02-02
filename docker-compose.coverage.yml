@@ -1,0 +1,29 @@
+version: '2'
+services:
+  coverage:
+    image: lists_test
+    command: yarn run cover-watch
+    volumes:
+      - ./api:/usr/local/src
+      - node_modules:/usr/local/src/node_modules
+    restart: always
+    links:
+      - redis:lists-db
+    environment:
+      - NODE_ENV=test
+  redis:
+    image: redis
+    logging:
+      driver: "none"
+  web:
+    image: python:alpine
+    ports:
+      - 666:80
+    working_dir: /app
+    command: python3 -m http.server 80
+    volumes:
+      - ./api/coverage/lcov-report/:/app
+    logging:
+      driver: "none"
+volumes:
+  node_modules: {}

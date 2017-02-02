@@ -21,9 +21,9 @@ RUN yarn global add mocha nyc babel-cli istanbul isparta rollup
 WORKDIR /usr/local/src/
 
 # Be more eficient
-# COPY package.json yarn.lock bower.json /usr/local/src/
+COPY package.json yarn.lock /usr/local/src/
 
-# RUN yarn --pure-lockfile
+RUN yarn --pure-lockfile
 
 # Copy the files
 COPY . /usr/local/src/

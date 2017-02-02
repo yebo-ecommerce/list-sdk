@@ -6,9 +6,7 @@
     }
   },
   "plugins": [
-    [
-      "module-alias", [{ "src": "./src/", "expose": "src" }]
-    ]
+    [ "module-alias", [ { "src": "./src/", "expose": "src" } ] ]
   ]
 }
 
