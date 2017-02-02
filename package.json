@@ -1,0 +1,10 @@
+{
+  "name": "list-sdk",
+  "version": "1.0.0",
+  "description": "Yebo Lists",
+  "main": "index.js",
+  "repository": "https://github.com/yebo-ecommerce/list-sdk",
+  "author": ["Gabriel Corado, Yuri Freire Lima"],
+  "license": "MIT"
+}
+

@@ -1,0 +1,10 @@
+version: '2'
+services:
+  web:
+    build: .
+    volumes:
+      - .:/usr/local/src
+      - node_modules:/usr/local/src
+
+volumes:
+  node_modules: {}
