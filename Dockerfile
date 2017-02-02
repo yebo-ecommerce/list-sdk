@@ -29,4 +29,4 @@ RUN yarn --pure-lockfile
 COPY . /usr/local/src/
 
 # Image command
-CMD ["yarn", "start"]
+CMD ["yarn", "run", "build"]
