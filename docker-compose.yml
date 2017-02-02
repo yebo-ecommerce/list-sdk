@@ -3,8 +3,8 @@ services:
   web:
     build: .
     volumes:
-      - .:/usr/local/src
-      - node_modules:/usr/local/src
+      - ./:/usr/local/src/
+      - node_modules:/usr/local/src/node_modules
 
 volumes:
   node_modules: {}

@@ -26,7 +26,7 @@ WORKDIR /usr/local/src/
 # RUN yarn --pure-lockfile
 
 # Copy the files
-COPY . /usr/local/src
+COPY . /usr/local/src/
 
 # Image command
 CMD ["yarn", "start"]
